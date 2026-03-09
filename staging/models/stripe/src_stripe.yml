@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: stripe
+    database: ANALYTICS_DB
+    schema: PUBLIC
+    tables:
+      - name: PAYMENT
+        description: "Stripe payment transactions"
+        columns:
+          - name: ORDERID
+            description: "Unique order ID"
+          - name: AMOUNT
+            description: "Payment amount"
+          - name: STATUS
+            description: "Payment status"
+          - name: PAYMENTMETHOD
+            description: "Method of payment"
+          - name: CREATED
+            description: "Date of payment creation"

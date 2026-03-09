@@ -1,6 +1,3 @@
-select
-    order_id,
-    sum(amount) as total_amount
-from {{ ref('stg_stripe_payment') }}  -- only the model name
-group by 1
-having total_amount < 0
+-- SELECT *
+-- FROM {{ ref('stg_stripe_payments') }}
+-- WHERE total_amount < 0
